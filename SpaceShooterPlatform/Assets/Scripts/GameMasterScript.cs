@@ -6,6 +6,7 @@ public class GameMasterScript : MonoBehaviour {
 
 	public int points;
 	public Text pointsText;
+	public Text levelText;
 
 	void Update() 
 	{
