@@ -53,7 +53,10 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 
-	// public void mainMenuButtonPressed()
+	public void mainMenuButtonPressed()
+	{
+		Application.LoadLevel (1);
+	}
 
 
 	public void quitButtonPressed()
