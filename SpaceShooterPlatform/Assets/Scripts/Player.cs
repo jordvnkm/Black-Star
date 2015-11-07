@@ -101,7 +101,21 @@ public class Player : MonoBehaviour {
 		if (other.CompareTag ("Coin")) 
 		{
 			Destroy (other.gameObject);
-			gameMaster.points += 100;
+			gameMaster.increment(100);
+		}
+
+		if (other.CompareTag ("SpeedUp")) 
+		{
+			Destroy(other.gameObject);
+			maxSpeed += 10;
+			speed += 25f;
+			gameMaster.setNotificationText("Speed Increased!", 3f);
+		}
+		if (other.CompareTag("JumpBoost"))
+		{
+			Destroy (other.gameObject);
+			jumpPower += 100f;
+			gameMaster.setNotificationText("Jump Increased!", 3f);
 		}
 	}
 }

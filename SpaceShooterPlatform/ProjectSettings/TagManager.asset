@@ -7,6 +7,8 @@ TagManager:
   - Coin
   - Enemy
   - GameMaster
+  - SpeedUp
+  - JumpBoost
   layers:
   - Default
   - TransparentFX
@@ -16,9 +18,9 @@ TagManager:
   - UI
   - 
   - 
-  - Actor
   - Item
   - Background
+  - Actor
   - 
   - 
   - 
@@ -43,4 +45,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1468430279
+    locked: 0
+  - name: Midground
+    uniqueID: 3052581731
+    locked: 0
+  - name: Item
+    uniqueID: 1357007369
+    locked: 0
+  - name: Character
+    uniqueID: 4276591751
+    locked: 0
+  - name: UI
+    uniqueID: 2704617789
     locked: 0

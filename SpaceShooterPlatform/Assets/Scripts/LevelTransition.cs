@@ -17,10 +17,10 @@ public class LevelTransition : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.CompareTag ("Player")) {
-			gameMaster.levelText.text = "Press [E] to move to the next level";
+			gameMaster.setNotificationText("Press [E] to move to the next level");
 			if(Input.GetKeyDown("e"))
 			{
-				Application.LoadLevel(Application.loadedLevel);
+				Application.LoadLevel(levelToLoad);
 			}
 		}
 	}
@@ -32,7 +32,7 @@ public class LevelTransition : MonoBehaviour {
 		{
 			if(Input.GetKeyDown("e"))
 			{
-				Application.LoadLevel(Application.loadedLevel);
+				Application.LoadLevel(levelToLoad);
 			}
 		}	
 	}
@@ -41,7 +41,7 @@ public class LevelTransition : MonoBehaviour {
 	{
 		if(other.CompareTag("Player"))
 		{
-			gameMaster.levelText.text = "";
+			gameMaster.setNotificationText("Press [E] to move to the next level", 0.5f);
 		}
 	}
 }
