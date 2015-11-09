@@ -4,7 +4,7 @@ using System.Collections;
 public class GameOverScript : MonoBehaviour {
 
 	private Animator anim;
-	private Player hero;
+	public PlayerHealth playerHealth;
 
 	public float restartDelay = 5f;
 	private float restartTimer;
@@ -13,15 +13,16 @@ public class GameOverScript : MonoBehaviour {
 	void Awake()
 	{
 		anim = GetComponent<Animator> ();
-		hero = GameObject.FindGameObjectWithTag ("Player").GetComponent<Player>();
+		GameObject player = GameObject.FindGameObjectWithTag ("Player");
+		playerHealth = playerHealth.GetComponent<PlayerHealth>();
 	}
 
 
 	void Update()
 	{
-		if (hero.health <= 0f) {
+
+		if (playerHealth.currentHealth <= 0f) {
 			anim.SetTrigger ("GameOver");
-			Time.timeScale = 0;
 
 			restartTimer += Time.deltaTime;
 

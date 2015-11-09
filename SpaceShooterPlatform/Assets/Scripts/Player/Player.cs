@@ -7,11 +7,11 @@ public class Player : MonoBehaviour {
     public float maxSpeed = 10;
     public float speed = 100f;
     public float jumpPower = 300f;
-	public float health = 100f;
 
     //bools
     public bool canDoubleJump;
     public bool grounded;
+	public bool canMove;
 
     //references
     private Rigidbody2D rb2d;
@@ -23,6 +23,7 @@ public class Player : MonoBehaviour {
         anim = gameObject.GetComponent<Animator>();
 	
 		gameMaster = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMasterScript>();
+		canMove = true;
 	}
 	
 	// Update is called once per frame
@@ -30,19 +31,19 @@ public class Player : MonoBehaviour {
         anim.SetBool("Grounded", grounded);
         anim.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x));
 
-        if (Input.GetAxis("Horizontal") < -0.1f)
+		if (Input.GetAxis("Horizontal") < -0.1f && canMove)
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
 
-        if (Input.GetAxis("Horizontal") > 0.1f)
+		if (Input.GetAxis("Horizontal") > 0.1f && canMove)
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
 
         if (Input.GetButtonDown("Jump"))
         {
-            if (grounded)
+            if (grounded && canMove)
             {
                 rb2d.AddForce(Vector2.up * jumpPower);
                 canDoubleJump = true;
@@ -78,7 +79,8 @@ public class Player : MonoBehaviour {
 
 
         //moving player
-        rb2d.AddForce((Vector2.right * speed) * h);
+		if(canMove)
+        	rb2d.AddForce((Vector2.right * speed) * h);
 
         // limiting speed of player
         if (rb2d.velocity.x > maxSpeed)
