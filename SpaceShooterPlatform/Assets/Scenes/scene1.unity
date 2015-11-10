@@ -500,7 +500,7 @@ GameObject:
   - 4: {fileID: 335178243}
   m_Layer: 0
   m_Name: ground2
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -641,6 +641,19 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1953498665}
   m_Script: {fileID: 11500000, guid: f74d5511e891f0045828e155fd62db7c, type: 3}
+--- !u!114 &423637255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 423637252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c32d93696836eb440bf685103ddabb67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 178312, guid: 79006eaf0ad7e644dbf9d76b3d960340, type: 2}
+  fireRate: 0
 --- !u!1 &424093530
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,7 +1038,7 @@ GameObject:
   - 4: {fileID: 672045994}
   m_Layer: 0
   m_Name: ground3
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1531,7 +1544,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 408552, guid: 5c6af9e051f34db4b943e96be345bf5e, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 19897624, guid: 5c6af9e051f34db4b943e96be345bf5e, type: 2}
+      propertyPath: EmissionModule.rate.scalar
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c6af9e051f34db4b943e96be345bf5e, type: 2}
@@ -1687,7 +1704,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 448430, guid: ca87d68bd1f6d75479df8b20212b9a12, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 19877458, guid: ca87d68bd1f6d75479df8b20212b9a12, type: 2}
+      propertyPath: EmissionModule.rate.scalar
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca87d68bd1f6d75479df8b20212b9a12, type: 2}
@@ -2137,7 +2158,7 @@ GameObject:
   - 4: {fileID: 1641254755}
   m_Layer: 0
   m_Name: ground1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2604,7 +2625,21 @@ Prefab:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 894330654}
-    m_RemovedComponents: []
+    - target: {fileID: 11466664, guid: 5cdae8899afe4b34a9554421ec70728d, type: 2}
+      propertyPath: playerBullet
+      value: 
+      objectReference: {fileID: 107310, guid: 79006eaf0ad7e644dbf9d76b3d960340, type: 2}
+    - target: {fileID: 21248234, guid: 5cdae8899afe4b34a9554421ec70728d, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f9ac084cc1be536439547e839f666bb8,
+        type: 3}
+    - target: {fileID: 487196, guid: 5cdae8899afe4b34a9554421ec70728d, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11466664, guid: 5cdae8899afe4b34a9554421ec70728d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5cdae8899afe4b34a9554421ec70728d, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1989329806

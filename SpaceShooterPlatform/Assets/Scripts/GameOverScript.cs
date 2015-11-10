@@ -13,7 +13,6 @@ public class GameOverScript : MonoBehaviour {
 	void Awake()
 	{
 		anim = GetComponent<Animator> ();
-		GameObject player = GameObject.FindGameObjectWithTag ("Player");
 		playerHealth = playerHealth.GetComponent<PlayerHealth>();
 	}
 

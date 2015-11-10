@@ -48,14 +48,11 @@ public class Player : MonoBehaviour {
                 rb2d.AddForce(Vector2.up * jumpPower);
                 canDoubleJump = true;
             }
-            else
+            else if (canDoubleJump)
             {
-                if (canDoubleJump)
-                {
-                    canDoubleJump = false;
-                    rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
-                    rb2d.AddForce(Vector2.up * jumpPower);
-                }
+                canDoubleJump = false;
+                rb2d.velocity = new Vector2(rb2d.velocity.x, 0);
+                rb2d.AddForce(Vector2.up * jumpPower);
             }
         }
 

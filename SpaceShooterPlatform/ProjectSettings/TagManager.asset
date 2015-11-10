@@ -9,6 +9,8 @@ TagManager:
   - GameMaster
   - SpeedUp
   - JumpBoost
+  - Ground
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX
@@ -19,8 +21,8 @@ TagManager:
   - 
   - 
   - Item
+  - Player
   - Background
-  - Actor
   - 
   - 
   - 
