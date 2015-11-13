@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21261106}
   - 50: {fileID: 5020374}
   - 58: {fileID: 5834610}
-  - 114: {fileID: 11467704}
+  - 114: {fileID: 11476154}
   m_Layer: 0
   m_Name: PlayerBullet
   m_TagString: Untagged
@@ -60,7 +60,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: .810576677
---- !u!114 &11467704
+--- !u!114 &11476154
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -68,11 +68,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 178312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff108f940887df540a4604653931ff0d, type: 3}
+  m_Script: {fileID: 11500000, guid: 8dc397192a63e044ba0f0ae4bd4ed188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 10
-  damage: 10
+  velocity: 20
+  damage: 15
+  range: 20
 --- !u!212 &21261106
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -105,7 +106,19 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: range
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: velocity
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: damage
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 178312}
