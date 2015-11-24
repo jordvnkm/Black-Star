@@ -9,7 +9,7 @@ public class DeathTrigger : MonoBehaviour {
 		if(other.CompareTag("Player"))
 		{
 			PlayerHealth player = other.gameObject.GetComponent<PlayerHealth>();
-			player.takeDamage(100);
+			player.takeDamage(player.currentHealth);
 		}
 	}
 }

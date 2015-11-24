@@ -31,7 +31,7 @@ GameObject:
   - 50: {fileID: 5088928}
   - 114: {fileID: 11448008}
   - 114: {fileID: 11403198}
-  - 114: {fileID: 11466664}
+  - 114: {fileID: 11469004}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -154,7 +154,7 @@ MonoBehaviour:
   canDoubleJump: 0
   grounded: 0
   canMove: 0
---- !u!114 &11466664
+--- !u!114 &11469004
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -162,9 +162,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 174714}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c10d7eb8a4f31614db41cc7c098baa5e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7fd56ffcd52ee2341808385e3a1b6080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 178312, guid: 79006eaf0ad7e644dbf9d76b3d960340, type: 2}
 --- !u!114 &11474756
 MonoBehaviour:
   m_ObjectHideFlags: 1

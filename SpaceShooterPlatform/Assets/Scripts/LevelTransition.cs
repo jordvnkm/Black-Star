@@ -41,7 +41,7 @@ public class LevelTransition : MonoBehaviour {
 	{
 		if(other.CompareTag("Player"))
 		{
-			gameMaster.setNotificationText("Press [E] to move to the next level", 0.5f);
+			gameMaster.setNotificationText("");
 		}
 	}
 }

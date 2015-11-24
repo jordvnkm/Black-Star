@@ -13,14 +13,18 @@ public class PlayerBullet : MonoBehaviour {
 	public int range;
 	private float position;
 
+
+
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<Player>();
 		rb2d = GetComponent<Rigidbody2D> ();
 
+		Debug.Log ("Damage: " + damage);
+
 		position = transform.position.x;
 		// Check to see the direction of the player
-		// Flip the direction and move according to the direction
+		// Flip the direction and move according to the direction	
 		if (player.transform.localScale.x < 0) {
 			velocity = -velocity;
 			transform.localScale = new Vector3(-1, 1, 1);
@@ -52,8 +56,18 @@ public class PlayerBullet : MonoBehaviour {
 
 	public void OnCollisionEnter2D(Collision2D other)
 	{
-		if (other.gameObject.CompareTag ("Ground")) {
+		string tag = other.gameObject.tag;
+		Debug.Log ("Bullet hit: " + tag);
+
+		if (tag == "Ground") 
+		{
 			Destroy(this.gameObject);
+		}
+		else if (tag == "Enemy") 
+		{
+			EnemyHealth enemy = other.gameObject.GetComponent<EnemyHealth>();
+			enemy.takeDamage(damage);
+			Destroy (this.gameObject);
 		}
 	}
 }

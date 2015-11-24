@@ -79,4 +79,16 @@ public class GameMasterScript : MonoBehaviour {
 		notificationText.text = message;
 	}
 
+
+	public void resetMutliplier()
+	{
+		multiplier = 1f;
+	}
+
+
+	public int getPoints()
+	{
+		return points;
+	}
+
 }

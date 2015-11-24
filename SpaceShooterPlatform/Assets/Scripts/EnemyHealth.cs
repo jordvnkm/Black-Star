@@ -5,12 +5,13 @@ public class EnemyHealth : MonoBehaviour {
 	
 	public int maxHealth;
 	public int currentHealth;
-
+	private GameMasterScript gameMaster;
 
 	// Use this for initialization
 	void Start () 
 	{
 		currentHealth = maxHealth;
+		gameMaster = GameObject.FindGameObjectWithTag ("GameMaster").GetComponent<GameMasterScript> ();
 	}
 	
 	// Update is called once per frame
@@ -18,6 +19,7 @@ public class EnemyHealth : MonoBehaviour {
 	{
 		if (currentHealth <= 0) {
 			Destroy(this.gameObject);
+			gameMaster.increment (200);
 		}
 	}
 

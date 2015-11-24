@@ -36,7 +36,7 @@ public class PlayerHealth : MonoBehaviour {
 
 		currentHealth -= amount;
 
-		healthText.text = "" + Mathf.Max(currentHealth, 0 );
+		healthText.text = "" + Mathf.Max(currentHealth, 0);
 
 		if (currentHealth <= 0 && !isDead) {
 			death();
@@ -50,5 +50,24 @@ public class PlayerHealth : MonoBehaviour {
 		player.canMove = false;
 		anim.SetTrigger ("Die");
 		Time.timeScale = 0;
+	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		string tag = other.gameObject.tag;
+		if (tag == "HealthRecovery") {
+			currentHealth = Mathf.Min (startingHealth, currentHealth + 10);
+			healthText.text = currentHealth.ToString ();
+			Destroy (other.gameObject);
+		} else if (tag == "HealthBoost") {
+			startingHealth += 25;
+			currentHealth = startingHealth;
+			healthText.text = currentHealth.ToString();
+			Destroy (other.gameObject);
+
+			GameMasterScript gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMasterScript>();
+			gm.setNotificationText("Health Increased!", 3f);
+
+		}
 	}
 }

@@ -1,9 +1,13 @@
 fileFormatVersion: 2
-guid: 78a6e54d968e3c84493d6aae6063b274
-timeCreated: 1448275540
+guid: 3b46206c5115f2349b939a093a806c41
+timeCreated: 1447635731
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Cannon Shooter_1
+    21300002: Cannon Shooter_2
+    21300004: Cannon Shooter_3
+    21300006: Cannon Shooter_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,18 +42,48 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 10
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Cannon Shooter_2
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 57.25
+        height: 53
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cannon Shooter_3
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 0
+        width: 57.25
+        height: 53
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cannon Shooter_0
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 0
+        width: 57
+        height: 53
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
