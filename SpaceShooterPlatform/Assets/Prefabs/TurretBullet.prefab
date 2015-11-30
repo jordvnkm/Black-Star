@@ -14,7 +14,7 @@ GameObject:
   - 61: {fileID: 6101746}
   m_Layer: 9
   m_Name: TurretBullet
-  m_TagString: TurretBullet
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830b9f6a5a2225f40acd487ba36e27f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 5
+  velocity: -5
   damage: 10
   range: 20
 --- !u!212 &21244946
@@ -114,6 +114,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: EnemyBullet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

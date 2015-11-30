@@ -8,9 +8,9 @@ public class PlayerBullet : MonoBehaviour {
 	private Rigidbody2D rb2d;
 
 	// Internal game logic
-	public float velocity;
-	public int damage;
-	public int range;
+	public float velocity = 15;
+	public int damage = 25;
+	public int range = 20;
 	private float position;
 
 
@@ -57,7 +57,6 @@ public class PlayerBullet : MonoBehaviour {
 	public void OnCollisionEnter2D(Collision2D other)
 	{
 		string tag = other.gameObject.tag;
-		Debug.Log ("Bullet hit: " + tag);
 
 		if (tag == "Ground") 
 		{
