@@ -4,9 +4,6 @@ using UnityEngine.UI;
 
 public class LevelTransition : MonoBehaviour {
 	public int levelToLoad;
-	public GameObject transitionUI;
-	public GameObject gameUI;
-	public GameObject pauseUI;
 
 	// References
 	private GameMasterScript gameMaster;
@@ -23,12 +20,7 @@ public class LevelTransition : MonoBehaviour {
 			gameMaster.setNotificationText("Press [E] to move to the next level");
 			if(Input.GetKeyDown("e"))
 			{
-				transitionUI.SetActive (true);
-				transitionUI.GetComponent<LevelCompletion>().setUIActive();
-				gameUI.SetActive(false);
-				pauseUI.SetActive(false);
-				Time.timeScale = 0;
-				//Application.LoadLevel(levelToLoad);
+				Application.LoadLevel(levelToLoad);
 			}
 		}
 	}
@@ -40,12 +32,7 @@ public class LevelTransition : MonoBehaviour {
 		{
 			if(Input.GetKeyDown("e"))
 			{
-				transitionUI.SetActive (true);
-				transitionUI.GetComponent<LevelCompletion>().setUIActive();
-				gameUI.SetActive(false);
-				pauseUI.SetActive(false);
-				Time.timeScale = 0;
-				//Application.LoadLevel(levelToLoad);
+				Application.LoadLevel(levelToLoad);
 			}
 		}	
 	}

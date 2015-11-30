@@ -89,16 +89,11 @@ public class Player : MonoBehaviour {
             rb2d.velocity = new Vector2(-maxSpeed, rb2d.velocity.y);
         }
 
+
+
+
+
     }
-
-
-
-	public GameMasterScript getGameMaster()
-	{
-		return gameMaster;
-	}
-
-
 
 	// Create triggers with collectibles
 	void OnTriggerEnter2D(Collider2D other)

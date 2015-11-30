@@ -137,7 +137,6 @@ MonoBehaviour:
   startingHealth: 100
   currentHealth: 0
   healthText: {fileID: 0}
-  deathText: {fileID: 0}
 --- !u!114 &11448008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -150,8 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 10
-  speed: 100
-  jumpPower: 500
+  speed: 150
+  jumpPower: 1500
   canDoubleJump: 0
   grounded: 0
   canMove: 0
@@ -210,11 +209,7 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: speed
-      value: 100
-      objectReference: {fileID: 0}
+    m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 174714}
