@@ -61,12 +61,12 @@ TagManager:
   - name: Midground
     uniqueID: 3052581731
     locked: 0
-  - name: Actor
-    uniqueID: 4276591751
+  - name: UI
+    uniqueID: 2704617789
     locked: 0
   - name: Item
     uniqueID: 1357007369
     locked: 0
-  - name: UI
-    uniqueID: 2704617789
+  - name: Actor
+    uniqueID: 4276591751
     locked: 0

@@ -4,6 +4,7 @@ using System.Collections;
 public class EnemyHealth : MonoBehaviour {
 	
 	public int maxHealth;
+	public int pointsToIncrease;
 	private int currentHealth;
 	public GameObject recovery;
 	private GameMasterScript gameMaster;
@@ -21,7 +22,7 @@ public class EnemyHealth : MonoBehaviour {
 		if (currentHealth <= 0) {
 			createRecovery();
 			Destroy(this.gameObject);
-			gameMaster.increment (200);
+			gameMaster.increment (pointsToIncrease);
 		}
 	}
 

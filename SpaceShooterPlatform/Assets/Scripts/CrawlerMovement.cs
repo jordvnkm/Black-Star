@@ -25,6 +25,7 @@ public class CrawlerMovement : MonoBehaviour {
 		anim = GetComponent<Animator> ();
 		attacking = false;
 		hero = GameObject.FindGameObjectWithTag ("Player");
+
 	}
 	
 	// Update is called once per frame
@@ -38,8 +39,8 @@ public class CrawlerMovement : MonoBehaviour {
 	
 	void FixedUpdate()
 	{
-		//rb2d.velocity = Vector2.right * 5 * -this.transform.localScale.x;
-		rb2d.AddForce (Vector2.right * currentSpeed);
+		rb2d.velocity = Vector2.right * currentSpeed;
+		//rb2d.AddForce (Vector2.right * currentSpeed);
 	}
 
 

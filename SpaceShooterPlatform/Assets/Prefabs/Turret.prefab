@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 491002}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: shootDirection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 114: {fileID: 11436554}
   - 212: {fileID: 21221084}
   - 61: {fileID: 6162254}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Turret
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -84,7 +84,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 50
-  currentHealth: 0
+  pointsToIncrease: 100
+  recovery: {fileID: 174660, guid: e93364db000ca3e4c8103e7f879d49ae, type: 2}
 --- !u!114 &11436554
 MonoBehaviour:
   m_ObjectHideFlags: 1

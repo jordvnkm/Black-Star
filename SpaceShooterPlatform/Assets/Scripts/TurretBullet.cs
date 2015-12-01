@@ -37,9 +37,11 @@ public class TurretBullet : MonoBehaviour {
 	public void OnCollisionEnter2D(Collision2D other) {
 		string tag = other.gameObject.tag;
 		if (tag == "Player") {
-			GameObject player = GameObject.FindGameObjectWithTag("Player");
-			player.GetComponent<PlayerHealth>().takeDamage(damage);
-			GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMasterScript>().resetMutliplier();
+			GameObject player = GameObject.FindGameObjectWithTag ("Player");
+			player.GetComponent<PlayerHealth> ().takeDamage (damage);
+			GameObject.FindGameObjectWithTag ("GameMaster").GetComponent<GameMasterScript> ().resetMutliplier ();
+			Destroy (this.gameObject);
+		} else if (tag == "Ground") {
 			Destroy (this.gameObject);
 		}
 	}
