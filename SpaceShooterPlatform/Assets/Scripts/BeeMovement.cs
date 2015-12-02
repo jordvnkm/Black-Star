@@ -26,6 +26,7 @@ public class BeeMovement : MonoBehaviour {
 		attacking = false;
 
 		rb2d = GetComponent<Rigidbody2D> ();
+		rb2d.velocity = new Vector2 (currentSpeed, 0);
 		anim = GetComponent<Animator> ();
 		hero = GameObject.FindGameObjectWithTag ("Player").GetComponent<Player> ();
 
@@ -35,13 +36,11 @@ public class BeeMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		checkLocalScale ();
 		checkRange ();
 		checkForPlayer ();
 	}
-
-	void FixedUpdate() {
-		rb2d.velocity = new Vector2(currentSpeed, 0);
-	}
+	
 
 	public void flipDirection()
 	{
@@ -61,11 +60,13 @@ public class BeeMovement : MonoBehaviour {
 		flyingSpeed = -flyingSpeed;
 		chaseSpeed = -chaseSpeed;
 		currentSpeed = -currentSpeed;
+
+		rb2d.velocity = new Vector2 (currentSpeed, 0);
 	}
 
 
 	private void OnCollisionEnter2D(Collision2D other) {
-		if (other.gameObject.CompareTag ("Ground")) {
+		if (other.gameObject.CompareTag ("Ground") || other.gameObject.CompareTag("Enemy")) {
 			this.flipDirection ();
 		}
 	}
@@ -80,7 +81,7 @@ public class BeeMovement : MonoBehaviour {
 		}
 	}
 
-	private void checkForPlayer() {
+	public void checkForPlayer() {
 		if (Mathf.Abs (this.transform.position.x - hero.transform.position.x) < movementRange) {
 			positionRange = this.transform.position.x;
 			currentSpeed = chaseSpeed;
@@ -101,4 +102,24 @@ public class BeeMovement : MonoBehaviour {
 			flipDirection ();
 		}
 	}
+
+
+	public float getCurrentSpeed(){
+		return currentSpeed;
+	}
+
+	public void setCurrentSpeed(float speed){
+		currentSpeed = speed;
+		rb2d.velocity = Vector2.right * currentSpeed;
+	}
+
+
+	public void checkLocalScale(){
+		if (this.transform.localScale.x > 0 && this.currentSpeed > 0) {
+			this.transform.localScale = new Vector3 (-1, 1, 1);
+		} else if (this.transform.localScale.x < 0 && this.currentSpeed < 0) {
+			this.transform.localScale = new Vector3 (1, 1, 1);
+		}
+	}
+
 }

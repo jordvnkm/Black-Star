@@ -3,13 +3,22 @@ using System.Collections;
 
 public class BeeBullet : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+	public int damage = 10;
+	public int velocity = -9;
+	private Rigidbody2D rb2d;
+
+	private void Start()
+	{
+		rb2d = GetComponent<Rigidbody2D> ();
+		rb2d.velocity = new Vector2 (0, velocity);
 	}
+
 	
-	// Update is called once per frame
-	void Update () {
-	
+	private void OnCollisionEnter2D(Collision2D other) {
+		Destroy (this.gameObject);
+		if (other.gameObject.CompareTag ("Player")) {
+			PlayerHealth heroHealth = other.gameObject.GetComponent<PlayerHealth>();
+			heroHealth.takeDamage(damage);
+		}
 	}
 }
