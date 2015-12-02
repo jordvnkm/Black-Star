@@ -39,7 +39,7 @@ public class CrawlerMovement : MonoBehaviour {
 	
 	void FixedUpdate()
 	{
-		rb2d.velocity = Vector2.right * currentSpeed;
+		rb2d.velocity = new Vector2(currentSpeed, -9);
 		//rb2d.AddForce (Vector2.right * currentSpeed);
 	}
 
