@@ -71,9 +71,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc397192a63e044ba0f0ae4bd4ed188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 35
-  damage: 85
-  range: 280
+  velocity: 10
+  damage: 25
+  range: 20
 --- !u!212 &21261106
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -113,7 +113,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: velocity
-      value: 35
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: damage

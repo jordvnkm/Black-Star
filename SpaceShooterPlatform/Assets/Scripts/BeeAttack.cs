@@ -8,8 +8,8 @@ public class BeeAttack : MonoBehaviour {
 	private BeeMovement bm;
 	private Animator anim;
 	public GameObject bullet;
-
-	private float speed;
+	
+	private float speed; // player speed
 
 	private float timeStart;
 	private float timeThresh;
@@ -31,11 +31,6 @@ public class BeeAttack : MonoBehaviour {
 	void Update () {
 		int thisX = (int)this.transform.position.x;
 		int heroX = (int)hero.transform.position.x;
-
-		Debug.Log ("Time Start: " + timeStart.ToString () + " Current Time: " + Time.time.ToString ());
-		if (thisX == heroX) {
-			Debug.Log ("Player and Bee in the same position");
-		}
 
 		if(thisX == heroX && (Time.time - timeStart > timeThresh)){
 			anim.SetBool ("firing", true);

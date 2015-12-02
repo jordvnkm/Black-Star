@@ -29,6 +29,8 @@ public class PlayerBullet : MonoBehaviour {
 			velocity = -velocity;
 			transform.localScale = new Vector3(-1, 1, 1);
 		}
+
+		rb2d.velocity = Vector2.right * velocity;
 	}
 
 
@@ -38,12 +40,6 @@ public class PlayerBullet : MonoBehaviour {
 	}
 
 
-
-	void FixedUpdate()
-	{
-		// Move the bullet
-		rb2d.AddForce (Vector2.right * velocity);
-	}
 
 
 	private void checkRange()
