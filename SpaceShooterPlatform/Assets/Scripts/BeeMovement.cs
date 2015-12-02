@@ -17,6 +17,7 @@ public class BeeMovement : MonoBehaviour {
 	// How far they will move, once reached, it will random decided to switch direction or not
 	private float positionRange; 
 
+	public int damage = 25;
 
 
 
@@ -68,6 +69,13 @@ public class BeeMovement : MonoBehaviour {
 		if (other.gameObject.CompareTag ("Ground")) {
 			this.flipDirection ();
 		}
+		if (other.gameObject.CompareTag ("Player")) {
+			other.gameObject.GetComponent<PlayerHealth> ().takeDamage (damage);
+		} else if (other.gameObject.CompareTag ("Enemy")) {
+			flipDirection ();
+		} else if (other.gameObject.CompareTag ("EnemyBullet")) {
+			Destroy (other.gameObject);
+		}
 	}
 
 	// Will determine the patrol logic for the bee
@@ -101,4 +109,6 @@ public class BeeMovement : MonoBehaviour {
 			flipDirection ();
 		}
 	}
+
+
 }

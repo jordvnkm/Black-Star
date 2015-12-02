@@ -32,8 +32,8 @@ TagManager:
   - Item
   - Ground
   - Background
-  - 
-  - 
+  - enemy
+  - enemy bullet
   - 
   - 
   - 
