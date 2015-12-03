@@ -151,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 10
   speed: 100
-  jumpPower: 500
+  jumpPower: 1400
   canDoubleJump: 0
   grounded: 0
   canMove: 0
@@ -214,6 +214,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: speed
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: jumpPower
+      value: 1400
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

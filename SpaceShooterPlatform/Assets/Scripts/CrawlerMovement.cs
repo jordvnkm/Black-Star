@@ -22,10 +22,10 @@ public class CrawlerMovement : MonoBehaviour {
 	{
 		currentSpeed = walkingSpeed;
 		rb2d = GetComponent<Rigidbody2D> ();
+		rb2d.velocity = new Vector2 (currentSpeed, -9);
 		anim = GetComponent<Animator> ();
 		attacking = false;
 		hero = GameObject.FindGameObjectWithTag ("Player");
-
 	}
 	
 	// Update is called once per frame
