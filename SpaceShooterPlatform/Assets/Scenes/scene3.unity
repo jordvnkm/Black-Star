@@ -4568,7 +4568,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 458670, guid: 99d55a38c9fb4144dbd86a086b17a69e, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 99d55a38c9fb4144dbd86a086b17a69e, type: 2}
@@ -4720,7 +4720,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 180084, guid: db02fada7651b1840814ea10a3761533, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11428534, guid: db02fada7651b1840814ea10a3761533, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -5696,6 +5696,10 @@ Prefab:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 423637253}
+    - target: {fileID: 122834, guid: 68afa810258531345adb04bdb9f8c54c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 68afa810258531345adb04bdb9f8c54c, type: 2}
   m_IsPrefabParent: 0
@@ -6624,7 +6628,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 420326, guid: d1889e5026dd74e7b9a4f6de6a569542, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -.0700000003
+      value: -.100000001
       objectReference: {fileID: 0}
     - target: {fileID: 420326, guid: d1889e5026dd74e7b9a4f6de6a569542, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6648,7 +6652,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 420326, guid: d1889e5026dd74e7b9a4f6de6a569542, type: 2}
       propertyPath: m_RootOrder
-      value: 114
+      value: 115
       objectReference: {fileID: 0}
     - target: {fileID: 21248488, guid: d1889e5026dd74e7b9a4f6de6a569542, type: 2}
       propertyPath: m_SortingLayerID
