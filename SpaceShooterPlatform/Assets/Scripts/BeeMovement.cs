@@ -112,6 +112,8 @@ public class BeeMovement : MonoBehaviour {
 	}
 
 
+<<<<<<< HEAD
+=======
 	public float getCurrentSpeed(){
 		return currentSpeed;
 	}
@@ -130,4 +132,5 @@ public class BeeMovement : MonoBehaviour {
 		}
 	}
 
+>>>>>>> master
 }
