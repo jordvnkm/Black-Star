@@ -14,6 +14,7 @@ public class TurretBullet : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
+		rb2d.velocity = Vector2.right * velocity;
 		position = transform.position.x;
 	}
 	
@@ -22,9 +23,6 @@ public class TurretBullet : MonoBehaviour {
 		checkRange ();
 	}
 
-	void FixedUpdate() {
-		rb2d.AddForce (Vector2.right * velocity);
-	}
 
 
 	private void checkRange() {

@@ -22,10 +22,10 @@ public class CrawlerMovement : MonoBehaviour {
 	{
 		currentSpeed = walkingSpeed;
 		rb2d = GetComponent<Rigidbody2D> ();
+		rb2d.velocity = new Vector2 (currentSpeed, -9);
 		anim = GetComponent<Animator> ();
 		attacking = false;
 		hero = GameObject.FindGameObjectWithTag ("Player");
-
 	}
 	
 	// Update is called once per frame
@@ -36,12 +36,7 @@ public class CrawlerMovement : MonoBehaviour {
 		if(attacking)
 			attackPlayer ();
 	}
-	
-	void FixedUpdate()
-	{
-		rb2d.velocity = new Vector2(currentSpeed, -9);
-		//rb2d.AddForce (Vector2.right * currentSpeed);
-	}
+
 
 
 	public void flipDirection()
@@ -62,6 +57,8 @@ public class CrawlerMovement : MonoBehaviour {
 		walkingSpeed = -walkingSpeed;
 		attackSpeed = -attackSpeed;
 		currentSpeed = -currentSpeed;
+
+		rb2d.velocity = new Vector2 (currentSpeed, -9);
 	}
 
 	public float getCurrentSpeed()
@@ -80,6 +77,7 @@ public class CrawlerMovement : MonoBehaviour {
 			anim.SetTrigger ("Walking");
 		}
 	}
+
 
 
 	public bool isInRange(int range)
@@ -102,12 +100,13 @@ public class CrawlerMovement : MonoBehaviour {
 
 	private void OnCollisionEnter2D(Collision2D other)
 	{
-		if (other.gameObject.CompareTag ("Player")) {
+		string tag = other.gameObject.tag;
+		if (tag == "Player") {
 			hero.GetComponent<PlayerHealth> ().takeDamage (damage);
-		} else if (other.gameObject.CompareTag ("Enemy")) {
+		} else if (tag == "Enemy") {
 			flipDirection ();
-		} else if (other.gameObject.CompareTag ("EnemyBullet")) {
-			Destroy (other.gameObject);
+		} else if (tag == "EnemyBullet") {
+			Destroy(other.gameObject);
 		}
 	}
 
