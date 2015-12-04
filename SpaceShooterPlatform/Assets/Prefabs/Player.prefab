@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 488928}
   - 61: {fileID: 6152966}
   - 114: {fileID: 11474756}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: groundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,7 +32,7 @@ GameObject:
   - 114: {fileID: 11448008}
   - 114: {fileID: 11403198}
   - 114: {fileID: 11469004}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -151,18 +151,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 10
   speed: 100
-<<<<<<< HEAD
-  jumpPower: 1200
-=======
   jumpPower: 1400
->>>>>>> master
   canDoubleJump: 0
   grounded: 0
   canMove: 0
-  knockback: 0
-  knockbackLength: 0
-  knockbackCount: 0
-  knockbackFromRight: 0
 --- !u!114 &11469004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -224,13 +216,8 @@ Prefab:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 0}
-<<<<<<< HEAD
-      propertyPath: m_Layer
-      value: 8
-=======
       propertyPath: jumpPower
       value: 1400
->>>>>>> master
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
