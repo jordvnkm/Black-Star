@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 433888}
   - 212: {fileID: 21210366}
   - 61: {fileID: 6107942}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BGTile (5)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 452230}
   - 61: {fileID: 6171036}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: 3Block Tile
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - 4: {fileID: 485052}
   - 212: {fileID: 21223356}
   - 61: {fileID: 6177674}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BGTile (4)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   - 4: {fileID: 482904}
   - 212: {fileID: 21279998}
   - 61: {fileID: 6139986}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BGTile (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -258,6 +258,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_SortingLayerID
       value: -1242385565
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

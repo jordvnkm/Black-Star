@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 410914}
   - 212: {fileID: 21258920}
   - 61: {fileID: 6163148}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Spike (5)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 452116}
   - 212: {fileID: 21220930}
   - 61: {fileID: 6188966}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Spike (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - 4: {fileID: 480630}
   - 212: {fileID: 21274382}
   - 61: {fileID: 6141674}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Spike (6)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -60,9 +60,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 430938}
   - 61: {fileID: 6170388}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Long Spikes
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +77,7 @@ GameObject:
   - 4: {fileID: 403226}
   - 212: {fileID: 21252920}
   - 61: {fileID: 6101602}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Spike (4)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - 4: {fileID: 438392}
   - 212: {fileID: 21218334}
   - 61: {fileID: 6132148}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Spike (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   - 4: {fileID: 468562}
   - 212: {fileID: 21241184}
   - 61: {fileID: 6144498}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Spike
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   - 4: {fileID: 444952}
   - 212: {fileID: 21235784}
   - 61: {fileID: 6107636}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Spike (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -530,7 +530,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 120904}

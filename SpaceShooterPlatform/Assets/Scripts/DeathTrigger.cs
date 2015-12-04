@@ -9,15 +9,7 @@ public class DeathTrigger : MonoBehaviour {
 		if(other.CompareTag("Player"))
 		{
 			PlayerHealth player = other.gameObject.GetComponent<PlayerHealth>();
-			player.takeDamage(100000);
-		}
-	}
-	void OnTriggerExit2D(Collider2D other)
-	{
-		if(other.CompareTag("Player"))
-		{
-			PlayerHealth player = other.gameObject.GetComponent<PlayerHealth>();
-			player.takeDamage(100000);
+			player.takeDamage(player.currentHealth);
 		}
 	}
 }
