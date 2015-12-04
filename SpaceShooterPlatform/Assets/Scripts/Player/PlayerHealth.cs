@@ -40,7 +40,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	public void takeDamage(int amount)
 	{
-		if (!damaged) {
+		if (!damaged && player.canTakeDamage) {
 			damaged = true;
 
 			currentHealth -= amount;
@@ -52,6 +52,7 @@ public class PlayerHealth : MonoBehaviour {
 			}
 
 			timeStart = Time.time;
+
 		}
 	}
 
@@ -63,6 +64,23 @@ public class PlayerHealth : MonoBehaviour {
 		deathText.text = "\tYou Died!\nFinal Score: " + player.getGameMaster ().getPoints ();
 		anim.SetTrigger ("Die");
 		Time.timeScale = 0;
+	}
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		int layer = other.gameObject.layer;
+		Player player = GetComponent<Player> ();
+		if ((layer == 13 || layer == 14) && player.canTakeDamage) {
+			player.knockbackCount = player.knockbackLength;
+			player.invulnerableCount = 2;
+			player.gameObject.layer = layer;
+			if (other.transform.position.x < transform.position.x)
+			{
+				player.knockbackFromRight = false;
+			}
+			else
+				player.knockbackFromRight = true;
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
@@ -80,7 +98,6 @@ public class PlayerHealth : MonoBehaviour {
 
 			GameMasterScript gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMasterScript>();
 			gm.setNotificationText("Health Increased!", 3f);
-
 		}
 	}
 }
