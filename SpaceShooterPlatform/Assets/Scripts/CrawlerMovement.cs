@@ -79,6 +79,7 @@ public class CrawlerMovement : MonoBehaviour {
 	}
 
 
+
 	public bool isInRange(int range)
 	{
 		return (this.transform.position - hero.transform.position).magnitude < range;
