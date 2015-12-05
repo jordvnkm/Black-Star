@@ -168,20 +168,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 487196, guid: 5cdae8899afe4b34a9554421ec70728d, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 11403198, guid: 5cdae8899afe4b34a9554421ec70728d, type: 2}
-      propertyPath: deathText
-      value: 
-      objectReference: {fileID: 2134841602}
     - target: {fileID: 11403198, guid: 5cdae8899afe4b34a9554421ec70728d, type: 2}
       propertyPath: healthText
       value: 
       objectReference: {fileID: 1749221651}
-    - target: {fileID: 11448008, guid: 5cdae8899afe4b34a9554421ec70728d, type: 2}
-      propertyPath: jumpPower
-      value: 1400
-      objectReference: {fileID: 0}
+    - target: {fileID: 11403198, guid: 5cdae8899afe4b34a9554421ec70728d, type: 2}
+      propertyPath: deathText
+      value: 
+      objectReference: {fileID: 2134841602}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cdae8899afe4b34a9554421ec70728d, type: 2}
   m_IsPrefabParent: 0
@@ -7313,20 +7309,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 422216, guid: 7bbc4b19517e0c042a62f043d2094412, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11445826, guid: 7bbc4b19517e0c042a62f043d2094412, type: 2}
-      propertyPath: pauseUI
+      propertyPath: transitionUI
       value: 
-      objectReference: {fileID: 43096755}
+      objectReference: {fileID: 826037118}
     - target: {fileID: 11445826, guid: 7bbc4b19517e0c042a62f043d2094412, type: 2}
       propertyPath: gameUI
       value: 
       objectReference: {fileID: 1688103575}
     - target: {fileID: 11445826, guid: 7bbc4b19517e0c042a62f043d2094412, type: 2}
-      propertyPath: transitionUI
+      propertyPath: pauseUI
       value: 
-      objectReference: {fileID: 826037118}
+      objectReference: {fileID: 43096755}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7bbc4b19517e0c042a62f043d2094412, type: 2}
   m_IsPrefabParent: 0
