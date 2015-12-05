@@ -52,10 +52,16 @@ public class PauseMenu : MonoBehaviour {
 		Application.LoadLevel (Application.loadedLevel);
 	}
 
+	public void nextLevelButtonPressed()
+	{
+		int levelToLoad = GameObject.FindGameObjectWithTag ("Exit").GetComponent<LevelTransition> ().levelToLoad;
+		Application.LoadLevel (levelToLoad);
+	}
+
 
 	public void mainMenuButtonPressed()
 	{
-		Application.LoadLevel (1);
+		Application.LoadLevel (0);
 	}
 
 
