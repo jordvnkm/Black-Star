@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830b9f6a5a2225f40acd487ba36e27f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: -5
+  velocity: 10
   damage: 10
   range: 20
 --- !u!212 &21244946
@@ -109,7 +109,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: velocity
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Layer

@@ -73,7 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 10
   damage: 25
-  range: 20
+  range: 40
 --- !u!212 &21261106
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -109,7 +109,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: range
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: velocity
